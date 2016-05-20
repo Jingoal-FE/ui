@@ -32,8 +32,7 @@ class TextBox extends Input {
   }
 
   getValue() {
-    let a = ReactDom.findDOMNode(this.refs.input).value;
-    return   a;
+    return  ReactDom.findDOMNode(this.refs.input).value;
   }
 }
 

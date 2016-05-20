@@ -1,7 +1,7 @@
 var webpack = require('webpack')
 var webpackDevMiddleware = require('webpack-dev-middleware')
 var webpackHotMiddleware = require('webpack-hot-middleware')
-var config = require('./webpack.config')
+var config = require('./../webpack.config.js')
 
 var app = new (require('express'))()
 var port = 3000
@@ -14,8 +14,8 @@ app.get("/", function(req, res) {
   res.sendFile(__dirname + '/index.html')
 })
 
-app.get("/static/browser.js", function(req, res) {
-  res.sendFile(__dirname + '/dist/browser.js')
+app.get("/lib/polyfill.min.js", function(req, res) {
+  res.sendFile(__dirname + '/vendors/polyfill.min.js')
 })
 
 app.listen(port, function(error) {
