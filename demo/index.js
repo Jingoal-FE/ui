@@ -1,8 +1,3 @@
-// import 'console-polyfill'
-// import 'core-js'
-// import 'es6-promise'
-// import 'fetch-ie8'
-// import 'matchmedia-polyfill'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Route, hashHistory, Redirect } from 'react-router'
