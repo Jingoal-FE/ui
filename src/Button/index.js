@@ -1,2 +1,6 @@
-import Button from './Button'
-export default Button
+import Button from './Button';
+import ButtonGroup from './ButtonGroup';
+import './button.scss';
+
+Button.Group = ButtonGroup;
+export default Button;
