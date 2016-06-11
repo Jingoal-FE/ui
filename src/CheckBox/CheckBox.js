@@ -1,12 +1,24 @@
+import RcCheckbox from 'rc-checkbox';
 import React from 'react';
-import ReactDom from 'react-dom';
+import CheckboxGroup from './Group';
 import classNames from 'classnames';
-import { CheckBox as AntCheckBox }from 'antd';
 
-class CheckBox extends React.Component {
+export default class Checkbox extends React.Component {
+    static Group = CheckboxGroup;
+    static defaultProps = {
+        prefixCls: 'jui-checkbox',
+    }
     render() {
-        return 'checkbox'
+        const { prefixCls, style, children, className, ...restProps } = this.props;
+        const classString = classNames({
+            [className]: !!className,
+            [`${prefixCls}-wrapper`]: true,
+        });
+        return (
+            <label className={classString} style={style}>
+                <RcCheckbox {...restProps} prefixCls={prefixCls} children={null} />
+                {children !== undefined ? <span>{children}</span> : null}
+            </label>
+        );
     }
 }
-
-export default CheckBox;
