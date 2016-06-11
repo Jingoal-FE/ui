@@ -1,0 +1,120 @@
+@mixin slide-motion($className, $keyframeName) {
+  @include make-motion($className, $keyframeName);
+  .#{$className}-enter,
+               .#{$className}-appear {
+                              opacity: 0;
+                              animation-timing-function: $ease-out-quint;
+                            }
+  .#{$className}-leave {
+                 animation-timing-function: $ease-in-quint;
+               }
+}
+
+@include slide-motion(slide-up, juiSlideUp);
+@include slide-motion(slide-down, juiSlideDown);
+@include slide-motion(slide-left, juiSlideLeft);
+@include slide-motion(slide-right, juiSlideRight);
+
+@keyframes juiSlideUpIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0% 0%;
+    transform: scaleY(.8);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 0% 0%;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes juiSlideUpOut {
+  0% {
+    opacity: 1;
+    transform-origin: 0% 0%;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    transform-origin: 0% 0%;
+    transform: scaleY(.8);
+  }
+}
+
+@keyframes juiSlideDownIn {
+  0% {
+    opacity: 0;
+    transform-origin: 100% 100%;
+    transform: scaleY(.8);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 100% 100%;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes juiSlideDownOut {
+  0% {
+    opacity: 1;
+    transform-origin: 100% 100%;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    transform-origin: 100% 100%;
+    transform: scaleY(.8);
+  }
+}
+
+@keyframes juiSlideLeftIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0% 0%;
+    transform: scaleX(.8);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 0% 0%;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes juiSlideLeftOut {
+  0% {
+    opacity: 1;
+    transform-origin: 0% 0%;
+    transform: scaleX(1);
+  }
+  100% {
+    opacity: 0;
+    transform-origin: 0% 0%;
+    transform: scaleX(.8);
+  }
+}
+
+@keyframes juiSlideRightIn {
+  0% {
+    opacity: 0;
+    transform-origin: 100% 0%;
+    transform: scaleX(.8);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 100% 0%;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes juiSlideRightOut {
+  0% {
+    opacity: 1;
+    transform-origin: 100% 0%;
+    transform: scaleX(1);
+  }
+  100% {
+    opacity: 0;
+    transform-origin: 100% 0%;
+    transform: scaleX(.8);
+  }
+}
