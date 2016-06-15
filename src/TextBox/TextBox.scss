@@ -1,4 +1,12 @@
-.jg-textbox {
-    width: 200px;
-    padding: 2px 4px;
+@import "../common/styles/themes/default/index";
+@import "../common/styles/mixins/index";
+
+// Input styles
+.jui-input {
+    @include input();
+}
+
+//== Style for input-group: input with label, with button or dropdown...
+.jui-input-group {
+    @include input-group("jui-input");
 }

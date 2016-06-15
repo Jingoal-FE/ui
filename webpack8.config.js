@@ -1,19 +1,28 @@
-var webpackConfig = require('./webpack.config');
 var webpack = require('webpack');
+var getWebpackConfig = require('./getWebpackConfig');
+
+var webpackConfig = getWebpackConfig();
 
 webpackConfig.entry = {
-    'shim': './demo/shim.js',
-    'bundle8': './demo/index.js'
+    'bundle8': './demo/index.js',
+    'common8': ['react', 'react-dom']
 };
+
 webpackConfig.module.postLoaders.push(
     {
         test: /\.js$/,
         loaders: ['es3ify-loader']
     }
 );
+
 webpackConfig.plugins.push(
     new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify('production')
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+        name: "common8",
+        filename: "[name].js",
+        minChunks: Infinity,
     })
 );
 

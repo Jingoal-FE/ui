@@ -17,6 +17,9 @@ app.get("/", function(req, res) {
 app.get("/static/bundle8.js", function(req, res) {
   res.sendFile(__dirname + '/dist/bundle8.js')
 })
+app.get("/static/common8.js", function(req, res) {
+  res.sendFile(__dirname + '/dist/common8.js')
+})
 
 
 app.get('/lib/*',function(req,res){

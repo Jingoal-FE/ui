@@ -1,7 +1,7 @@
 {
-  "name": "jingoal-ui",
+  "name": "jgui",
   "title": "jingoal UI React",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "./src/index.js",
   "keywords": [
     "react",
@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jingoal-FE/ui.git"
+    "url": "git+https://github.com/jingoal-FE/ui.git"
   },
   "license": "MIT",
   "dependencies": {
@@ -61,7 +61,6 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
     "babel-runtime": "^6.3.19",
-
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.5",
     "sass-loader": "^3.2.0 ",
@@ -70,7 +69,6 @@
     "es3ify-loader": "^0.2.0",
     "autoprefixer": "^6.3.3",
     "isomorphic-style-loader": "0.0.10",
-
     "es5-shim": "4.5.9",
     "es6-promise": "^3.2.1 ",
     "fetch-ie8": "^1.4.2",
@@ -78,7 +76,6 @@
     "object-assign": "^4.0.1",
     "core-js": "^2.1.3",
     "matchmedia-polyfill": "0.3.0",
-
     "webpack": "^1.12.14",
     "webpack-dev-middleware": "^1.5.1",
     "webpack-hot-middleware": "^2.9.0",
@@ -86,18 +83,25 @@
     "express": "4.13.4",
     "compression": "1.6.2",
     "browser-sync": "^2.11.1",
-
     "babel-plugin-antd": "0.4.0",
-
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
     "react-intl": "^2.0.1",
     "react-router": "^1.0.3"
   },
-
   "scripts": {
     "start": "node demo/server.js",
-    "build-all": "webpack && webpack --config=webpack8.config.js",
+    "deploy": "webpack && webpack --config=webpack8.config.js",
     "build": "webpack"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/jingoal-FE/ui/issues"
+  },
+  "homepage": "https://github.com/jingoal-FE/ui#readme",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "author": "",
+  "description": ""
 }
