@@ -6,9 +6,9 @@
   text-transform: none;
   text-rendering: auto;
   line-height: 1;
-
+  border: none;
   &:before {
     display: block;
-    font-family: "anticon" !important;
+    font-family: "juiicon" !important;
   }
 }

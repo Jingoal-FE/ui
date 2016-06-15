@@ -1,3 +1,5 @@
+$ui-prefixCls           : jui;
+
 // Color
 $primary-color          : #24a4ff;
 $info-color             : #2db7f5;
@@ -18,8 +20,8 @@ $border-radius-base     : 3px;
 $border-radius-sm       : 2px;
 
 // ICONFONT
-$iconfont-css-prefix    : anticon;
-$icon-url               : "https://at.alicdn.com/t/font_1463992151_360388";
+$iconfont-css-prefix    : #{$ui-prefixCls}-icon;
+$icon-url               : "/lib/fonts/#{$ui-prefixCls}icon";
 
 // LINK
 $link-color             : #2db7f5;
@@ -143,7 +145,7 @@ $label-color                 : $text-color;
 // Input
 $input-height-base: 28px;
 $input-height-lg: 32px;
-$input-height-sm: 22px;
+$input-height-sm: 24px;
 
 $input-padding-horizontal    : 7px;
 $input-padding-vertical-base : 4px;

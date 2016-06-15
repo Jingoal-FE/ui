@@ -7,6 +7,6 @@
   },
   "plugins": [
     "transform-decorators-legacy",
-    "antd"
-  ],
+    ["antd", { "style": "css" }]
+  ]
 }

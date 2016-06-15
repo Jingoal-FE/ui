@@ -203,6 +203,10 @@
     margin-left: -1px;
   }
 
+  .#{$btnClassName} {
+    margin-right: 0;
+  }
+
   .#{$btnClassName}:not(:first-child):not(:last-child) {
     border-radius: 0;
     padding-left: 8px;

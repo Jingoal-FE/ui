@@ -14,9 +14,14 @@ app.get("/", function(req, res) {
   res.sendFile(__dirname + '/index.html')
 })
 
-app.get("/lib/polyfill.min.js", function(req, res) {
-  res.sendFile(__dirname + '/vendors/polyfill.min.js')
+app.get("/static/bundle8.js", function(req, res) {
+  res.sendFile(__dirname + '/dist/bundle8.js')
 })
+
+
+app.get('/lib/*',function(req,res){
+  res.sendFile(__dirname + '/vendors/' + req.path.replace('/lib/', ''));
+});
 
 app.listen(port, function(error) {
   if (error) {

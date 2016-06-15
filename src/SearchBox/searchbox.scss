@@ -1,4 +1,5 @@
-@import "../common/styles/index";
+@import "../common/styles/themes/default/index";
+@import "../common/styles/mixins/index";
 
 .jui-search-input-wrapper {
   display: inline-block;
@@ -21,8 +22,8 @@
     position: relative;
     border-width: 0 0 0 1px;
     z-index: 2;
-    padding-left: 8px;
-    padding-right: 8px;
+    line-height: 1;
+    padding: 5px 7px;
     &:hover {
       border-color: $border-color-base;
     }

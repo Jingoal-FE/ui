@@ -1,18 +1,27 @@
 import React from 'react';
 import classNames from 'classnames';
 
-export default function Group(props) {
-    const className = classNames({
-        'jui-input-group': true,
-        [props.className]: !!props.className,
+const prefix = 'jui-btn-group-';
+
+export default function ButtonGroup(props) {
+    const { size, className, ...others } = props;
+
+    // large => lg
+    // small => sm
+    const sizeCls = ({
+            large: 'lg',
+            small: 'sm',
+        })[size] || '';
+
+    const classes = classNames({
+        'jui-btn-group': true,
+        [prefix + sizeCls]: sizeCls,
+        [className]: className,
     });
-    return (
-        <span className={className} style={props.style}>
-      {props.children}
-    </span>
-    );
+
+    return <div {...others} className={classes} />;
 }
 
-Group.propTypes = {
-    children: React.PropTypes.any,
+ButtonGroup.propTypes = {
+    size: React.PropTypes.oneOf(['large', 'small']),
 };

@@ -52,7 +52,7 @@
   border: 1px solid $input-border-color;
   border-radius: $border-radius-base;
   @include placeholder(); // Reset placeholder
-  @include transition("border .2s #{$ease-in-out}, background .2s #{$ease-in-out}, box-shadow .2s #{$ease-in-out}");
+  transition: border .2s $ease-in-out, background .2s $ease-in-out, box-shadow .2s $ease-in-out;
 
   &:hover {
     @include hover();

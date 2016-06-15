@@ -1,12 +1,12 @@
 // font-face
 // @icon-url： 字体源文件的地址
 @font-face {
-  font-family: 'anticon';
-  src: url('#{$icon-url}.eot'); /* IE9*/
-  src: url('#{$icon-url}.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('#{$icon-url}.woff') format('woff'), /* chrome、firefox */
-  url('#{$icon-url}.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('#{$icon-url}.svg#iconfont') format('svg'); /* iOS 4.1- */
+  font-family: 'juiicon';
+  src: url('#{$icon-url}.eot?jgkqxc'); /* IE9*/
+  src: url('#{$icon-url}.eot?jgkqxc#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('#{$icon-url}.woff?jgkqxc') format('woff'), /* chrome、firefox */
+  url('#{$icon-url}.ttf?jgkqxc') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('#{$icon-url}.svg?jgkqxc#icomoon') format('svg'); /* iOS 4.1- */
 }
 
 .#{$iconfont-css-prefix} {
@@ -61,7 +61,7 @@
 .#{$iconfont-css-prefix}-tablet:before                   {content:"\e695";}
 .#{$iconfont-css-prefix}-solution:before                 {content:"\e68f";}
 .#{$iconfont-css-prefix}-poweroff:before                 {content:"\e691";}
-.#{$iconfont-css-prefix}-search:before                   {content:"\e690";}
+.#{$iconfont-css-prefix}-search:before                   {content:"\e9a8";}
 .#{$iconfont-css-prefix}-share-alt:before                {content:"\e68e";}
 .#{$iconfont-css-prefix}-setting:before                  {content:"\e68d";}
 .#{$iconfont-css-prefix}-poweroff:before                 {content:"\e68b";}
