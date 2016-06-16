@@ -58,13 +58,13 @@ export default class CheckboxGroup extends React.Component {
     render() {
         const options = this.getOptions();
         return (
-            <div className="jui-checkbox-group">
+            <div className="jgui-checkbox-group">
                 {
                     options.map(option =>
                         <Checkbox disabled={'disabled' in option ? option.disabled : this.props.disabled}
                                   checked={this.state.value.indexOf(option.value) !== -1}
                                   onChange={() => this.toggleOption(option)}
-                                  className="jui-checkbox-group-item" key={option.value}>
+                                  className="jgui-checkbox-group-item" key={option.value}>
                             {option.label}
                         </Checkbox>
                     )

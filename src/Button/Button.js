@@ -5,7 +5,7 @@ import Icon from '../Icon';
 
 export default class Button extends React.Component {
     static defaultProps = {
-        prefixCls: 'jui-btn',
+        prefixCls: 'jgui-btn',
         onClick() {},
         loading: false,
     }

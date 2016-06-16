@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 export default class Form extends React.Component {
     static defaultProps = {
-        prefixCls: 'jui-form',
+        prefixCls: 'jgui-form',
         onSubmit(e) {
             e.preventDefault();
         },

@@ -1,5 +1,5 @@
 import React from 'react'
-import { CheckBox } from 'jui';
+import { CheckBox } from 'jgui';
 const CheckBoxGroup = CheckBox.Group;
 
 const plainOptions = ['Apple', 'Pear', 'Orange'];

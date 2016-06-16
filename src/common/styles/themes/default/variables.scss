@@ -1,4 +1,4 @@
-$ui-prefixCls           : jui;
+$ui-prefixCls           : jgui;
 
 // Color
 $primary-color          : #24a4ff;
@@ -91,7 +91,7 @@ $btn-circle-size-lg     : 32px;
 $btn-circle-size-sm     : 22px;
 
 // CheckBox
-$checkbox-prefix-cls    : jui-checkbox;
+$checkbox-prefix-cls    : #{$ui-prefixCls}-checkbox;
 
 // Media queries breakpoints
 // Extra small screen / phone

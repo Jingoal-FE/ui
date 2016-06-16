@@ -1,5 +1,5 @@
 import React from 'react'
-import { Select } from 'jui';
+import { Select } from 'jgui';
 
 export default class CalendarDemo extends React.Component {
     handleChange(e) {

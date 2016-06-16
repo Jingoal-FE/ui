@@ -54,13 +54,12 @@ module.exports = function getWebpackConfig() {
 
         resolve: {
             alias: {
-                'jui': path.join(__dirname, 'src')
+                'jgui': path.join(__dirname, 'src')
             }
         }
         ,
 
-        devtool: 'source-map',
-        debug: true
+        devtool: false
     };
 
     return webpackConfig;

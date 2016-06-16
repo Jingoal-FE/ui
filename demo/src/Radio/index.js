@@ -1,5 +1,5 @@
 import React from 'react'
-import { Radio, Button, TextBox } from 'jui';
+import { Radio, Button, TextBox } from 'jgui';
 const RadioGroup = Radio.Group;
 const RadioButton = Radio.Button;
 

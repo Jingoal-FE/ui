@@ -4,7 +4,7 @@ import RcInputNumber from 'rc-input-number';
 
 export default class NumberBox extends React.Component {
     static defaultProps = {
-        prefixCls: 'jui-input-number',
+        prefixCls: 'jgui-input-number',
         step: 1,
     }
 

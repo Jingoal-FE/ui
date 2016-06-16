@@ -1,17 +1,17 @@
 @import "../src/common/styles/index";
 
-.jui-btn, .jui-input-group {
+.jgui-btn, .jgui-input-group {
     margin-right: 8px;
     margin-bottom: 12px;
 }
-.jui-input-group {
-    .jui-btn {
+.jgui-input-group {
+    .jgui-btn {
        margin: 0;
     }
 }
 
 .demo-textbox {
-    .jui-input {
+    .jgui-input {
         width: 240px;
         margin-right: 12px;
     }

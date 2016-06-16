@@ -8,7 +8,7 @@ function prefixClsFn(prefixCls, ...args) {
 export default class FormItem extends React.Component {
     static defaultProps = {
         hasFeedback: false,
-        prefixCls: 'jui-form',
+        prefixCls: 'jgui-form',
     }
 
     static propTypes = {
@@ -33,8 +33,8 @@ export default class FormItem extends React.Component {
             return '';
         }
         const { span, offset } = colDef;
-        const col = span ? `jui-col-${span}` : '';
-        const offsetCol = offset ? ` jui-col-offset-${offset}` : '';
+        const col = span ? `jgui-col-${span}` : '';
+        const offsetCol = offset ? ` jgui-col-offset-${offset}` : '';
         return col + offsetCol;
     }
 

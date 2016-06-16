@@ -120,7 +120,7 @@ export default class Affix extends React.Component {
 
     render() {
         const className = classNames({
-            'jui-affix': this.state.affixStyle,
+            'jgui-affix': this.state.affixStyle,
         });
 
         return (

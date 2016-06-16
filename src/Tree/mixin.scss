@@ -1,12 +1,12 @@
 @import "../common/styles/mixins/index";
 
-@mixin juiTreeSwitcherIcon() {
+@mixin jguiTreeSwitcherIcon() {
   position: relative;
   &:after {
     @include iconfont-size-under-12px(6px);
     content: '\e611';
     display: inline-block;
-    font-family: 'juiicon';
+    font-family: 'jguiicon';
     font-weight: bold;
     position: absolute;
     top: 0;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Calendar } from 'jui'
+import { Calendar } from 'jgui'
 
 export default class CalendarDemo extends React.Component {
     onPanelChange(value, mode) {

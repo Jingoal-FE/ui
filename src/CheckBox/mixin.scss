@@ -1,6 +1,6 @@
 @import "../common/styles/mixins/index";
 
-@mixin juiCheckboxFn($checkbox-prefix-cls: ant-checkbox) {
+@mixin jguiCheckboxFn($checkbox-prefix-cls: #{$ui-prefixCls}-checkbox) {
   $checkbox-inner-prefix-cls: "#{$checkbox-prefix-cls}-inner";
   // 一般状态
   .#{$checkbox-prefix-cls} {

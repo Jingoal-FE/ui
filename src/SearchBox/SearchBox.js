@@ -42,21 +42,21 @@ export default class SearchBox extends Component {
     render() {
         const { style, size, ...restProps } = this.props;
         const btnCls = classNames({
-            'jui-search-btn': true,
-            'jui-search-btn-noempty': !!this.state.value.trim(),
+            'jgui-search-btn': true,
+            'jgui-search-btn-noempty': !!this.state.value.trim(),
         });
         const searchCls = classNames({
-            'jui-search-input': true,
-            'jui-search-input-focus': this.state.focus,
+            'jgui-search-input': true,
+            'jgui-search-input-focus': this.state.focus,
         });
 
         return (
-            <div className="jui-search-input-wrapper" style={style}>
+            <div className="jgui-search-input-wrapper" style={style}>
                 <InputGroup className={searchCls}>
                     <TextBox {...restProps} value={this.state.value} onChange={this.handleInputChange.bind(this)}
                                           onFocus={this.handleFocusBlur.bind(this)} onBlur={this.handleFocusBlur.bind(this)} onPressEnter={this.handleSearch.bind(this)}
                     />
-                    <div className="jui-input-group-wrap">
+                    <div className="jgui-input-group-wrap">
                         <Button icon="search" className={btnCls} size={size} onClick={this.handleSearch.bind(this)} />
                     </div>
                 </InputGroup>

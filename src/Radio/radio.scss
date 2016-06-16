@@ -1,7 +1,7 @@
 @import "../common/styles/themes/default/index";
 @import "../common/styles/mixins/index";
 
-$radio-prefix-cls: jui-radio;
+$radio-prefix-cls: jgui-radio;
 $radio-group-prefix-cls: "#{$radio-prefix-cls}-group";
 $radio-inner-prefix-cls: "#{$radio-prefix-cls}-inner";
 $radio-duration: .2s;

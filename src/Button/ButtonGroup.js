@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-const prefix = 'jui-btn-group-';
+const prefix = 'jgui-btn-group-';
 
 export default function ButtonGroup(props) {
     const { size, className, ...others } = props;
@@ -14,7 +14,7 @@ export default function ButtonGroup(props) {
         })[size] || '';
 
     const classes = classNames({
-        'jui-btn-group': true,
+        'jgui-btn-group': true,
         [prefix + sizeCls]: sizeCls,
         [className]: className,
     });

@@ -1,4 +1,4 @@
-import { Popover, Button } from 'jui'
+import { Popover, Button } from 'jgui'
 import React from 'react'
 
 const content = (

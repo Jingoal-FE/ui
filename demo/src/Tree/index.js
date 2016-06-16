@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tree } from 'jui';
+import { Tree } from 'jgui';
 const TreeNode = Tree.TreeNode
 
 export default class RadioDemo extends React.Component {

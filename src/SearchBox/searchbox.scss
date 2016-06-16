@@ -1,21 +1,21 @@
 @import "../common/styles/themes/default/index";
 @import "../common/styles/mixins/index";
 
-.jui-search-input-wrapper {
+.jgui-search-input-wrapper {
   display: inline-block;
   vertical-align: middle;
 }
 
-.jui-search-input {
-  &.jui-input-group .jui-input:first-child,
-  &.jui-input-group .jui-select:first-child {
+.jgui-search-input {
+  &.jgui-input-group .jgui-input:first-child,
+  &.jgui-input-group .jgui-select:first-child {
     border-radius: $border-radius-base;
     position: absolute;
     top: -1px;
     width: 100%;
   }
 
-  .jui-search-btn {
+  .jgui-search-btn {
     @include btn-default();
     border-radius: 0 $border-radius-base - 1 $border-radius-base - 1 0;
     left: -1px;
@@ -32,8 +32,8 @@
       padding-bottom: 6px;
     }
   }
-  &#{&}-focus .jui-search-btn-noempty,
-  &:hover .jui-search-btn-noempty {
+  &#{&}-focus .jgui-search-btn-noempty,
+  &:hover .jgui-search-btn-noempty {
     @include btn-primary();
   }
 }

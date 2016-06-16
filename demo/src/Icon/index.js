@@ -1,4 +1,4 @@
-import {Icon } from 'jui'
+import { Icon } from 'jgui'
 import React from 'react'
 
 class ButtonDemo extends React.Component {

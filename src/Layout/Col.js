@@ -16,19 +16,19 @@ export default function Col(props) {
         }
         sizeClassObj = {
             ...sizeClassObj,
-            [`jui-col-${size}-${sizeProps.span}`]: sizeProps.span !== undefined,
-            [`jui-col-${size}-order-${sizeProps.order}`]: sizeProps.order,
-            [`jui-col-${size}-offset-${sizeProps.offset}`]: sizeProps.offset,
-            [`jui-col-${size}-push-${sizeProps.push}`]: sizeProps.push,
-            [`jui-col-${size}-pull-${sizeProps.pull}`]: sizeProps.pull,
+            [`jgui-col-${size}-${sizeProps.span}`]: sizeProps.span !== undefined,
+            [`jgui-col-${size}-order-${sizeProps.order}`]: sizeProps.order,
+            [`jgui-col-${size}-offset-${sizeProps.offset}`]: sizeProps.offset,
+            [`jgui-col-${size}-push-${sizeProps.push}`]: sizeProps.push,
+            [`jgui-col-${size}-pull-${sizeProps.pull}`]: sizeProps.pull,
         };
     });
     const classes = classNames({
-        [`jui-col-${span}`]: span !== undefined,
-        [`jui-col-order-${order}`]: order,
-        [`jui-col-offset-${offset}`]: offset,
-        [`jui-col-push-${push}`]: push,
-        [`jui-col-pull-${pull}`]: pull,
+        [`jgui-col-${span}`]: span !== undefined,
+        [`jgui-col-order-${order}`]: order,
+        [`jgui-col-offset-${offset}`]: offset,
+        [`jgui-col-push-${push}`]: push,
+        [`jgui-col-pull-${pull}`]: pull,
         [className]: !!className,
         ...sizeClassObj,
     });

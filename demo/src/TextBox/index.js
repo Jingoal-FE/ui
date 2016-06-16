@@ -1,4 +1,4 @@
-import { TextBox, Select, SearchBox, NumberBox } from 'jui'
+import { TextBox, Select, SearchBox, NumberBox } from 'jgui'
 import React from 'react'
 const InputGroup = TextBox.Group;
 

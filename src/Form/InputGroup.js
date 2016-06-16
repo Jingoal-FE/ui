@@ -3,9 +3,9 @@ import classNames from 'classnames';
 
 export default function Group(props) {
     const className = classNames({
-        'jui-input-group': true,
-        'jui-input-group-lg': props.size === 'large',
-        'jui-input-group-sm': props.size === 'small',
+        'jgui-input-group': true,
+        'jgui-input-group-lg': props.size === 'large',
+        'jgui-input-group-sm': props.size === 'small',
         [props.className]: !!props.className,
     });
     return (

@@ -1,4 +1,4 @@
-import { Modal, Button } from 'jui'
+import { Modal, Button } from 'jgui'
 import React from 'react'
 
 class ModalDemo extends React.Component {

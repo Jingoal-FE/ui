@@ -1,4 +1,4 @@
-import { Button, Icon } from 'jui'
+import { Button, Icon } from 'jgui'
 import React from 'react'
 const ButtonGroup = Button.Group;
 

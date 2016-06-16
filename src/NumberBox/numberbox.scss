@@ -1,7 +1,7 @@
 @import "../common/styles/themes/default/index";
 @import "../common/styles/mixins/index";
 
-$input-number-prefix-cls: jui-input-number;
+$input-number-prefix-cls: jgui-input-number;
 
 @mixin handler-disabled() {
   opacity: 0.72;
