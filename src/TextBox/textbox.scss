@@ -1,0 +1,12 @@
+@import "../common/styles/themes/default/index";
+@import "../common/styles/mixins/index";
+
+// Input styles
+.jgui-input {
+    @include input();
+}
+
+//== Style for input-group: input with label, with button or dropdown...
+.jgui-input-group {
+    @include input-group("jgui-input");
+}
