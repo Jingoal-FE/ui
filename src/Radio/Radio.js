@@ -1,15 +1,24 @@
-/**
- * Created by rongyao on 16/5/4.
- */
+import RcRadio from 'rc-radio';
 import React from 'react';
-import ReactDom from 'react-dom';
 import classNames from 'classnames';
-import { CheckBox as AntCheckBox }from 'antd';
 
-class Radio extends React.Component {
+export default class Radio extends React.Component {
+    static defaultProps = {
+        prefixCls: 'jgui-radio',
+    }
     render() {
-        return 'radio'
+        const { prefixCls, children, checked, disabled, className, style } = this.props;
+        const classString = classNames({
+            [`${prefixCls}`]: true,
+            [`${prefixCls}-checked`]: checked,
+            [`${prefixCls}-disabled`]: disabled,
+            [className]: !!className,
+        });
+        return (
+            <label className={classString} style={style}>
+                <RcRadio {...this.props} style={null} children={null} />
+                {children ? <span>{children}</span> : null}
+            </label>
+        );
     }
 }
-
-export default Radio;

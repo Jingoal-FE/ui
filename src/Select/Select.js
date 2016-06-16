@@ -1,12 +1,50 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import RcSelect, { Option, OptGroup } from 'rc-select';
 import classNames from 'classnames';
-import { CheckBox as AntCheckBox }from 'antd';
 
-class Select extends React.Component {
+export default class Select extends React.Component {
+    static Option = Option;
+    static OptGroup = OptGroup;
+
+    static defaultProps = {
+        prefixCls: 'jgui-select',
+        transitionName: 'slide-up',
+        choiceTransitionName: 'zoom',
+        showSearch: false,
+    }
+
+    static contextTypes = {
+        antLocale: React.PropTypes.object,
+    }
+
     render() {
-        return 'checkbox'
+        let {
+            size, className, combobox, notFoundContent, prefixCls, showSearch, optionLabelProp,
+        } = this.props;
+
+        const cls = classNames({
+            [`${prefixCls}-lg`]: size === 'large',
+            [`${prefixCls}-sm`]: size === 'small',
+            [className]: !!className,
+            [`${prefixCls}-show-search`]: showSearch,
+        });
+
+        const { antLocale } = this.context;
+        if (antLocale && antLocale.Select) {
+            notFoundContent = notFoundContent || antLocale.Select.notFoundContent;
+        }
+
+        if (combobox) {
+            notFoundContent = null;
+            // children 带 dom 结构时，无法填入输入框
+            optionLabelProp = optionLabelProp || 'value';
+        }
+
+        return (
+            <RcSelect {...this.props}
+                className={cls}
+                optionLabelProp={optionLabelProp || 'children'}
+                notFoundContent={notFoundContent} />
+        );
     }
 }
-
-export default Select;
