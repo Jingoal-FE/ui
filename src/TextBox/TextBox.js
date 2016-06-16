@@ -1,39 +1,122 @@
-import React from 'react';
-import ReactDom from 'react-dom';
-import { Input } from 'antd';
+import React, { Component, PropTypes } from 'react';
+import classNames from 'classnames';
 
-class TextBox extends Input {
+function fixControlledValue(value) {
+  if (typeof value === 'undefined' || value === null) {
+    return '';
+  }
+  return value;
+}
+
+export default class TextBox extends Component {
   static defaultProps = {
     defaultValue: '',
     disabled: false,
+    prefixCls: 'jgui-input',
     type: 'text',
-    theme: '',
-    prefixCls: 'jg-textbox',
     onPressEnter() {},
     onKeyDown() {},
   }
 
   static propTypes = {
-    type: React.PropTypes.oneOf(['text', 'password', 'textarea']),
-    id: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.number,
+    type: PropTypes.string,
+    id: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
     ]),
-    size: React.PropTypes.oneOf(['small', 'default', 'large']),
-    disabled: React.PropTypes.bool,
-    value: React.PropTypes.any,
-    defaultValue: React.PropTypes.any,
-    className: React.PropTypes.string,
-    addonBefore: React.PropTypes.node,
-    addonAfter: React.PropTypes.node,
-    prefixCls: React.PropTypes.string,
-    onPressEnter: React.PropTypes.func,
-    onKeyDown: React.PropTypes.func,
+    size: PropTypes.oneOf(['small', 'default', 'large']),
+    disabled: PropTypes.bool,
+    value: PropTypes.any,
+    defaultValue: PropTypes.any,
+    className: PropTypes.string,
+    addonBefore: PropTypes.node,
+    addonAfter: PropTypes.node,
+    prefixCls: PropTypes.string,
+    onPressEnter: PropTypes.func,
+    onKeyDown: PropTypes.func,
   }
 
-  getValue() {
-    return  ReactDom.findDOMNode(this.refs.input).value;
+  handleKeyDown = (e) => {
+    if (e.keyCode === 13) {
+      this.props.onPressEnter(e);
+    }
+    this.props.onKeyDown(e);
+  }
+
+  renderLabledInput(children) {
+    const props = this.props;
+    const wrapperClassName = `${props.prefixCls}-group`;
+    const addonClassName = `${wrapperClassName}-addon`;
+    const addonBefore = props.addonBefore ? (
+        <span className={addonClassName}>
+        {props.addonBefore}
+      </span>
+    ) : null;
+
+    const addonAfter = props.addonAfter ? (
+        <span className={addonClassName}>
+        {props.addonAfter}
+      </span>
+    ) : null;
+
+    const className = classNames({
+      [`${props.prefixCls}-wrapper`]: true,
+      [wrapperClassName]: (addonBefore || addonAfter),
+    });
+
+    return (
+        <span className={className}>
+        {addonBefore}
+          {children}
+          {addonAfter}
+      </span>
+    );
+  }
+
+  renderInput() {
+    const props = { ...this.props };
+    const prefixCls = props.prefixCls;
+    if (!props.type) {
+      return props.children;
+    }
+
+    const inputClassName = classNames({
+      [prefixCls]: true,
+      [`${prefixCls}-sm`]: props.size === 'small',
+      [`${prefixCls}-lg`]: props.size === 'large',
+      [props.className]: !!props.className,
+    });
+
+    if ('value' in props) {
+      props.value = fixControlledValue(props.value);
+      // Input elements must be either controlled or uncontrolled,
+      // specify either the value prop, or the defaultValue prop, but not both.
+      delete props.defaultValue;
+    }
+
+    switch (props.type) {
+      case 'textarea':
+        return (
+            <textarea
+                {...props}
+                className={inputClassName}
+                onKeyDown={this.handleKeyDown}
+                ref="input"
+            />
+        );
+      default:
+        return (
+            <input
+                {...props}
+                className={inputClassName}
+                onKeyDown={this.handleKeyDown}
+                ref="input"
+            />
+        );
+    }
+  }
+
+  render() {
+    return this.renderLabledInput(this.renderInput());
   }
 }
-
-export default TextBox;
