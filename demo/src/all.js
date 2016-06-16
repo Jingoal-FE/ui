@@ -15,6 +15,7 @@ export default class all extends React.Component {
                 <div><Link to="/drawer">Drawer</Link></div>
                 <div><Link to="/table">Table</Link></div>
                 <div><Link to="/pager">Pager</Link></div>
+                <div><Link to="/tabs">Tabs</Link></div>
                 <div><Link to="/tree">Tree</Link></div>
                 <div><Link to="/uploader">Uploader</Link></div>
                 <div><Link to="/calendar">Calendar</Link></div>

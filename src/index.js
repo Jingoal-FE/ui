@@ -17,3 +17,4 @@ export Table from "./Table";
 export Tree from "./Tree";
 export Icon from "./Icon";
 export Pager from "./Pager";
+export Tabs from "./Tabs";

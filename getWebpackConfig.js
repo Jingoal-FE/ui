@@ -6,7 +6,8 @@ module.exports = function getWebpackConfig() {
     var webpackConfig = {
         entry: {
             'bundle': './demo/index.js',
-            'common': ['react', 'react-dom']
+            'common': ['react', 'react-dom'],
+            'vendor': ['lodash', 'classnames']
         },
 
         output: {
