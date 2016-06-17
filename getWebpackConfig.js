@@ -5,8 +5,8 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = function getWebpackConfig() {
     var webpackConfig = {
         entry: {
-            'bundle': './demo/index.js',
-            'common': ['react', 'react-dom'],
+            'bundle': ['./demo/index.js'],
+            'common': ['react', 'react-dom', 'webpack-hot-middleware/client'],
             'vendor': ['lodash', 'classnames']
         },
 

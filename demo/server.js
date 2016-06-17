@@ -1,6 +1,7 @@
 var webpack = require('webpack')
 var webpackDevMiddleware = require('webpack-dev-middleware')
 var webpackHotMiddleware = require('webpack-hot-middleware')
+var browerSync = require('browser-sync');
 var config = require('./../webpack.config.js')
 
 var app = new (require('express'))()
@@ -20,7 +21,9 @@ app.get("/static/bundle8.js", function(req, res) {
 app.get("/static/common8.js", function(req, res) {
   res.sendFile(__dirname + '/dist/common8.js')
 })
-
+app.get("/static/vendor8.js", function(req, res) {
+  res.sendFile(__dirname + '/dist/vendor8.js')
+})
 
 app.get('/lib/*',function(req,res){
   res.sendFile(__dirname + '/vendors/' + req.path.replace('/lib/', ''));
@@ -32,4 +35,4 @@ app.listen(port, function(error) {
   } else {
     console.info("==> Listening on port %s. Open up http://localhost:%s/ in your browser.", port, port)
   }
-})
+});

@@ -5,7 +5,7 @@ var webpackConfig = getWebpackConfig();
 
 webpackConfig.entry = {
     'bundle8': './demo/index.js',
-    'common8': ['react', 'react-dom'],
+    'common8': ['react', 'react-dom', 'webpack-hot-middleware/client'],
     'vendor8': ['lodash', 'classnames']
 };
 
