@@ -22,6 +22,7 @@ import Icon from './src/Icon'
 import Calendar from './src/Calendar'
 import Tabs from './src/Tabs'
 import Drawer from './src/Drawer'
+import Tooltip from './src/Tooltip'
 
 import webConfig from './webConfig';
 
@@ -46,6 +47,7 @@ ReactDOM.render(
             <Route name="image" path="/image" component={Image} />
             <Route name="icon" path="/icon" component={Icon} />
             <Route name="calendar" path="/calendar" component={Calendar} />
+            <Route name="tooltip" path="/tooltip" component={Tooltip} />
             <Redirect from="*" to="/all" />
         </Route>
     </Router>,
