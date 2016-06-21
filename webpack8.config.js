@@ -5,14 +5,14 @@ var webpackConfig = getWebpackConfig();
 
 webpackConfig.entry = {
     'bundle8': './demo/index.js',
-    'common8': ['react', 'react-dom', 'webpack-hot-middleware/client'],
+    'common8': ['react', 'react-dom'],
     'vendor8': ['lodash', 'classnames']
 };
 
 webpackConfig.module.postLoaders.push(
     {
-        test: /\.js$/,
-        loaders: ['es3ify-loader']
+        test: /\.jsx?$/,
+        loader: 'es3ify-loader'
     }
 );
 

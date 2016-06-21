@@ -50,15 +50,13 @@ module.exports = function getWebpackConfig() {
                 {test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader"},
             ],
             postLoaders: []
-        }
-        ,
+        },
 
         resolve: {
             alias: {
                 'jgui': path.join(__dirname, 'src')
             }
-        }
-        ,
+        },
 
         devtool: false
     };
