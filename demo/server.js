@@ -1,7 +1,6 @@
 var webpack = require('webpack')
 var webpackDevMiddleware = require('webpack-dev-middleware')
 var webpackHotMiddleware = require('webpack-hot-middleware')
-var browerSync = require('browser-sync');
 var config = require('./../webpack.config.js')
 
 var app = new (require('express'))()
@@ -12,27 +11,27 @@ app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output
 app.use(webpackHotMiddleware(compiler))
 
 app.get("/", function(req, res) {
-  res.sendFile(__dirname + '/index.html')
+    res.sendFile(__dirname + '/index.html')
 })
 
 app.get("/static/bundle8.js", function(req, res) {
-  res.sendFile(__dirname + '/dist/bundle8.js')
+    res.sendFile(__dirname + '/dist/bundle8.js')
 })
 app.get("/static/common8.js", function(req, res) {
-  res.sendFile(__dirname + '/dist/common8.js')
+    res.sendFile(__dirname + '/dist/common8.js')
 })
 app.get("/static/vendor8.js", function(req, res) {
-  res.sendFile(__dirname + '/dist/vendor8.js')
+    res.sendFile(__dirname + '/dist/vendor8.js')
 })
 
 app.get('/lib/*',function(req,res){
-  res.sendFile(__dirname + '/vendors/' + req.path.replace('/lib/', ''));
+    res.sendFile(__dirname + '/vendors/' + req.path.replace('/lib/', ''));
 });
 
 app.listen(port, function(error) {
-  if (error) {
-    console.error(error)
-  } else {
-    console.info("==> Listening on port %s. Open up http://localhost:%s/ in your browser.", port, port)
-  }
+    if (error) {
+        console.error(error)
+    } else {
+        console.info("==> Listening on port %s. Open up http://localhost:%s/ in your browser.", port, port)
+    }
 });
