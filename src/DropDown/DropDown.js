@@ -4,7 +4,7 @@ import RcDropdown from 'rc-dropdown';
 export default class Dropdown extends React.Component {
     static defaultProps = {
         transitionName: 'slide-up',
-        prefixCls: 'jui-dropdown',
+        prefixCls: 'jgui-dropdown',
         mouseEnterDelay: 0.15,
         mouseLeaveDelay: 0.1,
     }

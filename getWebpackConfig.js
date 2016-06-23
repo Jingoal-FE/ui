@@ -27,7 +27,7 @@ module.exports = function getWebpackConfig() {
             preLoaders: [],
             loaders: [
                 {
-                    test: /\.js$/,
+                    test: /\.jsx?$/,
                     loaders: ['babel'],
                     include: [
                         path.join(__dirname, 'src'),
@@ -48,6 +48,10 @@ module.exports = function getWebpackConfig() {
                     loader: "url-loader?limit=10000&minetype=application/font-woff"
                 },
                 {test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader"},
+                {
+                    test: /\.html?$/,
+                    loader: "html"
+                }
             ],
             postLoaders: []
         },
@@ -58,7 +62,7 @@ module.exports = function getWebpackConfig() {
             }
         },
 
-        devtool: false
+        devtool: "source-map"
     };
 
     return webpackConfig;

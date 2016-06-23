@@ -1,6 +1,3 @@
-/**
- * Created by rongyao on 16/6/6.
- */
 import React from 'react';
 import Button from '../Button';
 import Icon from '../Icon';
@@ -25,7 +22,7 @@ export default class DropdownButton extends React.Component {
     render() {
         const { type, overlay, trigger, align, children, className, onClick, ...restProps } = this.props;
         const cls = classNames({
-            'jui-dropdown-button': true,
+            'jgui-dropdown-button': true,
             className: !!className,
         });
         return (

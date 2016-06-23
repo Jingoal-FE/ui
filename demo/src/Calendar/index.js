@@ -5,7 +5,7 @@ export default class CalendarDemo extends React.Component {
     onPanelChange(value, mode) {
         console.log(value, mode);
     }
-    
+
     render() {
         return (
             <div style={{ width: 290, border: '1px solid #d9d9d9', borderRadius: 4 }}>

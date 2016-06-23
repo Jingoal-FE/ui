@@ -23,8 +23,11 @@ import Calendar from './src/Calendar'
 import Tabs from './src/Tabs'
 import Drawer from './src/Drawer'
 import Tooltip from './src/Tooltip'
+import Editor from './src/Editor'
 
 import webConfig from './webConfig';
+
+console.log(typeof TextBox);
 
 ReactDOM.render(
     <Router history={hashHistory}>
@@ -48,6 +51,7 @@ ReactDOM.render(
             <Route name="icon" path="/icon" component={Icon} />
             <Route name="calendar" path="/calendar" component={Calendar} />
             <Route name="tooltip" path="/tooltip" component={Tooltip} />
+            <Route name="editor" path="/editor" component={Editor} />
             <Redirect from="*" to="/all" />
         </Route>
     </Router>,

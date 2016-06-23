@@ -22,6 +22,7 @@ export default class all extends React.Component {
                 <div><Link to="/image">Image</Link></div>
                 <div><Link to="/icon">Icon</Link></div>
                 <div><Link to="/tooltip">Tooltip</Link></div>
+                <div><Link to="/editor">Editor</Link></div>
             </div>
         );
     }
