@@ -1,11 +1,3 @@
-<<<<<<< Updated upstream
-import React from 'react'
-export default class demo extends React.Component {
-    render() {
-
-    }
-}
-=======
 /**
  * Created by rongyao on 16/6/4.
  */
@@ -25,4 +17,3 @@ class PagerDemo extends React.Component {
 }
 
 export default PagerDemo;
->>>>>>> Stashed changes

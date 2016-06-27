@@ -1,11 +1,3 @@
-<<<<<<< Updated upstream
-import React from 'react'
-export default class demo extends React.Component {
-    render() {
-
-    }
-}
-=======
 /**
  * Created by rongyao on 16/6/16.
  */
@@ -103,4 +95,3 @@ class TabsDemo extends React.Component {
     }
 }
 export default TabsDemo;
->>>>>>> Stashed changes
