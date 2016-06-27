@@ -1,0 +1,35 @@
+@import "../common/styles/themes/default/index";
+
+$tabs-bar-tab-border: 7px 15px 5px;
+
+.#{$tabs-prefix-cls} {
+    &-bar {
+        color: $text-color;
+        border-bottom: 1px solid $border-color-base;
+    }
+    &-bar &-tab {
+        float: left;
+        padding: $tabs-bar-tab-border;
+        cursor: pointer;
+    }
+    &-bar &-tab-active {
+        color: #333;
+        padding: (nth($tabs-bar-tab-border, 1) - 1px) (nth($tabs-bar-tab-border, 2) - 1px) nth($tabs-bar-tab-border, 3); 
+        border: 1px solid $border-color-base;
+        border-bottom: none;
+    }
+    
+    &-content &-panel-hidden {
+        display: none;
+    }
+}
+.#{$tabs-prefix-cls}-primary {
+    .#{$tabs-prefix-cls}-bar .#{$tabs-prefix-cls}-tab-active {
+        position: relative;
+        top: 1px;
+        color: #333;
+        padding: (nth($tabs-bar-tab-border, 1) - 1px) nth($tabs-bar-tab-border, 2) nth($tabs-bar-tab-border, 3);
+        border: none;
+        border-bottom: 2px solid $primary-color;
+    }
+}

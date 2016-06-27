@@ -1,0 +1,91 @@
+@import '../common/styles/themes/default/index';
+
+.#{$pager-prefix-cls} {
+    &-list {
+        list-style: none;
+        float: left;
+        &-item {
+            float: left;
+            margin-right: 6px;
+            & a {
+                display: block;
+                padding: 4px 9px;
+                color: #666;
+                background-color: #fff;
+                border: 1px solid #e6e6e6;
+                cursor: pointer;
+                &:hover {
+                    color: #333;
+                    border: 1px solid #ccc;
+                }
+                &:active {
+                    color: #333;
+                    border: 1px solid #ccc;
+                    background-color: #fafafa;
+                    box-shadow: 0 2px 2px #e6e6e6;
+                }
+            }
+            #{&}#{&}-active a {
+                color: #fff;
+                background-color: #797b80;
+                border: 1px solid #797b80;
+                box-shadow: none;
+            }
+            & button {
+                display: block;
+                line-height: 1.5;
+                padding: 4px 9px;
+                color: #666;
+                border: 1px solid #ebebeb;
+                background-color: #fff;
+                cursor: pointer;
+                &:hover {
+                    color: #333;
+                    border: 1px solid #ccc;
+                }
+                &:active {
+                    color: #333;
+                    border: 1px solid #ccc;
+                    background-color: #fafafa;
+                    box-shadow: 0 2px 2px #e6e6e6 inset;
+                }
+            }
+        }
+    }
+    &-jumper {
+        float: left;
+        padding: 0 10px;
+        color: #666;
+        &-input {
+            width: 35px;
+            height: 22px;
+            padding-left: 5px;
+            background-color: #fff;
+            border: 1px solid #ebebeb;
+            margin: 0 5px;
+            &:hover {
+                border: 1px solid #ccc;
+            }
+        }
+        &-btn {
+            line-height: 1.5;
+            padding: 3px 12px;
+            margin-left: 5px;
+            color: #666;
+            background-color: #f5f5f5;
+            border: none;
+            cursor: pointer;
+            &:hover {
+                color: #666;
+                background-color: #f5f5f5;
+                box-shadow: 0 -1px 0 #dcdcdc inset;
+            }
+            &:active {
+                box-shadow: 0 3px 3px #dcdcdc inset;
+            }
+        }
+    }
+    &-jumper-hidden {
+        display: none;
+    }
+}
